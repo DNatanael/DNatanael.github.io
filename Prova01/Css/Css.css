@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+.header {
+    background-color: rgb(92, 92, 92);
+    padding: 5px;
+    width: 100%;
+    text-align:start;
+  }
+
+.header button {
+    padding: 20px;
+    height: 10px;
+    display: block;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10% ;
+
+  }
+
+.header button:active {
+    background-color: rgb(75, 75, 75);
+    color: white;
+    flex-direction: column;
+    
+  }
+  
+.header .dropdown {
+    position: center;
+    display: inline-block;
+    
+  }
+  
+.header .dropdown-content {
+    display:none;
+    position: absolute;
+    background-color: #b35e5e;
+    width: 200px;
+    align-items: start;/*alinha o texto do drop*/
+    
+  }
+  
+.header .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    
+  }
+  
+.header button {
+    margin: 5px;
+    padding: 14px 16px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 3px 5px 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 400ms, box-shadow 400ms;
+} 
+
+.header .dropdown:active .dropdown-content {
+    flex-direction: column;
+    display: flex;
+    align-items: right;
+  }
+
+
+.container {
+    display: flex;
+    
+}
+
+
+.sidenav {
+    height: 1200px;
+    display:flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 200px;
+    
+    
+}
+
+.sidenav button{
+    height: 50px;
+    color: blue;
+  
+}
+
+.artigo {
+    width: 80vw;
+    height: 1200px;
+    color: rgb(0, 0, 0);
+    top: 10px;
+    background-color: antiquewhite;
+
+    
+}
+.content {
+  background-color: green;
+  width: 80vw;
+  height: 1200px;
+
+}
+
+@media (max-width:600px){
+    .container{
+    flex-direction: column;
+    }
+
+    .sidenav{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .artigo{
+        width: 100%;
+    }
+}
+.loader {
+    width: 200px;
+    height: 200px;
+    border: 20px solid #ffffff;
+    border-bottom-color: #00c3ff;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
